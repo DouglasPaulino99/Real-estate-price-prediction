@@ -38,8 +38,13 @@ def main():
         print(y_pred)
         return flask.render_template('home.html', valor_venda=y_pred)
 
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    if flask.request.method =='GET':
+        return flask.render_template('about.html')
+
         
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True) #Para teste local
-    #app.run()
+    #app.run(host='0.0.0.0', debug=True) #Para teste local
+    app.run()
 

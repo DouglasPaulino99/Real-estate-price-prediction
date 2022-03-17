@@ -15,7 +15,11 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+        
     </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Preço de Imóveis</title>
 
@@ -36,47 +40,56 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><h1>Imobiliária São Paulo</h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-            </div>
+          <a class="navbar-brand" href="#"><h1>Simulador São Paulo</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Página Inicial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">Sobre esse Projeto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+    <!-- Navigation -->
 
     <!-- Full Page Image Header with Vertically Centered Content -->
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="fw-light">Previsão de preço de imóveis usando Machine Learning</h1>
-                    <p class="lead">Essa é uma calculadora de preço de imóvies utilizando Machine Learning</p>
+                    <h1 class="fw-light"><b>Previsão de preço de imóveis usando Machine Learning</b></h1>
+                    <p class="lead">Essa é uma calculadora de preço de imóveis utilizando Machine Learning. O Algoritmo tem 80% de precisão.</p>
 
+                    
                     <form action= ""{{ url_for('main') }}"" method="POST">
+                        
 
                         <div class="form-group">
                             <label>Área</label>
-                            <input type="number" class="form-control" id="Area" name="Area">
+                            <input type="number" class="form-control" id="Area" name="Area" placeholder="Área da propriedade">
                         </div>
 
                         <div class="form-group">
                             <label>Condominio</label>
-                            <input type="number" class="form-control" id="Condominio" name="Condominio">
+                            <input type="number" class="form-control" id="Condominio" name="Condominio" placeholder="Valor do condomínio">
                         </div>
 
                         <div class="form-group">
                             <label>Quartos</label>
-                            <input type="number" class="form-control" id="Quartos" name="Quartos">
+                            <input type="number" class="form-control" id="Quartos" name="Quartos" placeholder="Número de quartos">
                         </div>
 
                         <div class="form-group">
                             <label>Suítes</label>
-                            <input type="number" class="form-control" id="suites" name="suites"> 
+                            <input type="number" class="form-control" id="suites" name="suites" placeholder="Número de Suites"> 
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Calcular preço</button>
@@ -85,11 +98,23 @@
                     {% if valor_venda %}
                     <hr>
 
-                    <h2>Preço de Venda: {{ 'R$ {:,.2f}'.format(valor_venda) }}</h2>
+                    <h2>Preço de Venda utilizando Random Forest Regressor: {{ 'R$ {:,.2f}'.format(valor_venda) }}</h2>
                     {% endif %}
 
                 </div>
+                <div class=" text-right">
+                    <a href="https://github.com/DouglasPaulino99" target="_blank" style="text-decoration:none">
+                        <i class="fa fa-github " style="font-size:48px;color:red"></i>
+                    </a>
+                    &nbsp;&nbsp
+                    <a href="https://www.linkedin.com/in/douglas-paulino-77a9a1180/" target="_blank">
+                        <i class="fa fa-linkedin" style="font-size:48px;color:#0E76A8"></i>
+                    </a>
+                    
+                    <h4>douglaspaulino9@hotmail.com</h4>
+                </div>
             </div>
+            
         </div>
     </header>
 
