@@ -1,6 +1,6 @@
 Nesse projeto, foi utilizado um modelo de Machine Learning para predizer o preço de casas na cidade de São Paulo com uma base de dados é de Abril de 2019.
 
-O objetivo foi aprender sobre o deploy de aplicações, criando um WebApp. Para isso, a biblioteca Flask foi utilizada como forma de fazer conexão entre o Python e o HTML e, o aplicativo foi postado no Heroku.
+O objetivo foi aprender sobre o deploy de aplicações, criando um WebApp. Para isso, a biblioteca Flask foi utilizada como forma de fazer conexão entre o Python e o HTML e, o aplicativo foi postado no Heroku. Para visualizar, [clique aqui](imoveissp.herokuapp.com/)
 
 Na segunda página do projeto foi postado o Jupyter notebook utilizado, com uma descrição mais detalhada a respeito da análise e metodologia.
 
